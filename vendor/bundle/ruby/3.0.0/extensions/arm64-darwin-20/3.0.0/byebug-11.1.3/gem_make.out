@@ -1,0 +1,19 @@
+current directory: /Users/inoueryouta/Find-Out-Game/vendor/bundle/ruby/3.0.0/gems/byebug-11.1.3/ext/byebug
+/Users/inoueryouta/.rbenv/versions/3.0.0/bin/ruby -I /Users/inoueryouta/.rbenv/versions/3.0.0/lib/ruby/3.0.0 -r ./siteconf20220216-20135-udwsxq.rb extconf.rb
+creating Makefile
+
+current directory: /Users/inoueryouta/Find-Out-Game/vendor/bundle/ruby/3.0.0/gems/byebug-11.1.3/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /Users/inoueryouta/Find-Out-Game/vendor/bundle/ruby/3.0.0/gems/byebug-11.1.3/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.bundle
+
+current directory: /Users/inoueryouta/Find-Out-Game/vendor/bundle/ruby/3.0.0/gems/byebug-11.1.3/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20220216-20135-mc4ao3/byebug
