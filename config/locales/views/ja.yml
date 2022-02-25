@@ -1,0 +1,10 @@
+ja:
+  defaults:
+    login: 'ログイン'
+    register: '登録'
+    logout: 'ログアウト'
+  gamelist:
+    inde:
+      title: 'ゲーム共有リスト'
+    new:
+      title: 'ゲーム共有リスト作成'
