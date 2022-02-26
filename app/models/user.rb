@@ -37,4 +37,6 @@ class User < ApplicationRecord
   def email_required?
     super && provider.blank?
   end
+
+  has_many :gamelists, dependent: :destroy
 end

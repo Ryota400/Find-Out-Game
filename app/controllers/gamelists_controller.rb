@@ -12,7 +12,7 @@ class GamelistsController < ApplicationController
     @gamelist = current_user.gamelists.build(gamelist_params)
     if @gamelist.save
       @client.update("例）投稿しました！（ここにTwitterにツイートされる内容を書き込む）")
-      redirect_to gamelists_path, :success: t('defaults.message.created', item: Gamelist.model_name.human)
+      redirect_to gamelists_path
     else
       flash.now['danger'] = t('defaults.message.not_created', item: Gamelist.model_name.human)
       render :new
@@ -26,15 +26,15 @@ class GamelistsController < ApplicationController
   private
 
   def gamelist_params
-    params.require(:board).permit(:title, :body)
+    params.require(:gamelist).permit(:title, :body)
   end
 
   def twitter_cilent
     @client = Twitter::REST::Client.new do |config|
-    config.consumer_key = ENV['CONSUMER_KEY']
-    config.consumer_secret = ENV['CONSUMER_SECRET']
-    config.access_token = ENV['ACCESS_TOKEN']
-    config.access_token_secret = ENV['ACCESS_TOKEN_SECRET']
+      config.consumer_key = ENV['TWITTER_API_KEY']
+      config.consumer_secret = ENV['TWITTER_API_SECRET']
+      config.access_token = ENV['ACCESS_TOKEN']
+      config.access_token_secret = ENV['ACCESS_TOKEN_SECRET']
+    end
   end
-
 end
