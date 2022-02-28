@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 
   root to: 'home#index'
   get 'home/show'
-  resources :gamelists, only: %i[index new create]
+  resources :gamelists
 end

@@ -1,0 +1,26 @@
+<div class="col-sm-12 col-lg-4 mb-3">
+  <div id="gamelist-id-<%= gamelist.id %>">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">
+          <%= link_to gamelist.title, gamelist_path(gamelist) %>
+        </h4>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <%= gamelist.user.username %>
+          </li>
+          <li class="list-inline-item">
+            <%= l gamelist.created_at, format: :long %>
+          </li>
+          <li class="list-inline-item">
+            <%= link_to "編集", edit_gamelist_path(gamelist), id: "gamelist-edit-#{gamelist.id}"  %>
+          </li>
+          <li class="list-inline-item">
+            <%= link_to "削除", gamelist_path(gamelist), id: "button-delete-#{gamelist.id}", method: :delete, data: { confirm: t('defaults.message.delete_confirm') }  %>
+          </li>
+        </ul>
+        <p class="card-text"><%= gamelist.body %></p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -3,8 +3,20 @@ ja:
     login: 'ログイン'
     register: '登録'
     logout: 'ログアウト'
-  gamelist:
-    inde:
+    message:
+      require_login: 'ログインしてください'
+      created: "%{item}を作成しました"
+      not_created: "%{item}を作成できませんでした"
+      updated: "%{item}を更新しました"
+      not_updated: "%{item}を更新できませんでした"
+      deleted: "%{item}を削除しました"
+      delete_confirm: '削除しますか？'
+  gamelists:
+    index:
       title: 'ゲーム共有リスト'
     new:
       title: 'ゲーム共有リスト作成'
+    show:
+      title: 'ゲーム共有リスト詳細'
+    edit:
+      title: 'ゲーム共有リスト編集'

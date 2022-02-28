@@ -1,5 +1,6 @@
 <header>
   <nav>
+      <strong><%= link_to 'Find Out Game', root_path %></strong>
       <% if user_signed_in? %>
         <%= link_to 'ゲーム共有リスト', gamelists_path %>
         <strong><%= link_to current_user.username, home_show_path %></strong>
