@@ -12,12 +12,10 @@
           <li class="list-inline-item">
             <%= l gamelist.created_at, format: :long %>
           </li>
-          <li class="list-inline-item">
+          <% if gamelist.user == current_user %>
             <%= link_to "編集", edit_gamelist_path(gamelist), id: "gamelist-edit-#{gamelist.id}"  %>
-          </li>
-          <li class="list-inline-item">
             <%= link_to "削除", gamelist_path(gamelist), id: "button-delete-#{gamelist.id}", method: :delete, data: { confirm: t('defaults.message.delete_confirm') }  %>
-          </li>
+          <% end %>
         </ul>
         <p class="card-text"><%= gamelist.body %></p>
       </div>

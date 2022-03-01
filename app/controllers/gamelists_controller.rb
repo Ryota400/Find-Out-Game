@@ -50,6 +50,12 @@ class GamelistsController < ApplicationController
     params.require(:gamelist).permit(:title, :body)
   end
 
+  def ensure_user
+    @gamelists = current_user.gamelists
+    @gamelist = @gamelists.find_by(id: params[:id])
+    redirect_to gamelist_path unless @gamelist
+  end
+
   def twitter_client
     @client = Twitter::REST::Client.new do |config|
       config.consumer_key = ENV['TWITTER_API_KEY']
