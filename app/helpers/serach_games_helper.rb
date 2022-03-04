@@ -1,0 +1,2 @@
+module SerachGamesHelper
+end

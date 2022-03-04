@@ -1,0 +1,13 @@
+current directory: /Users/inoueryouta/Find-Out-Game/vendor/bundle/ruby/3.0.0/gems/json-2.6.1/ext/json
+/Users/inoueryouta/.rbenv/versions/3.0.0/bin/ruby -I /Users/inoueryouta/.rbenv/versions/3.0.0/lib/ruby/3.0.0 -r ./siteconf20220304-44802-5w08zt.rb extconf.rb
+creating Makefile
+
+current directory: /Users/inoueryouta/Find-Out-Game/vendor/bundle/ruby/3.0.0/gems/json-2.6.1/ext/json
+make "DESTDIR=" clean
+
+current directory: /Users/inoueryouta/Find-Out-Game/vendor/bundle/ruby/3.0.0/gems/json-2.6.1/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/inoueryouta/Find-Out-Game/vendor/bundle/ruby/3.0.0/gems/json-2.6.1/ext/json
+make "DESTDIR=" install

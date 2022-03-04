@@ -1,0 +1,2 @@
+class SerachGamesController < ApplicationController
+end
