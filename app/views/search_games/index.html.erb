@@ -1,0 +1,37 @@
+<h1>Rakuserach</h1>
+<div class='content'>
+  <div id="search-box">
+    <%= form_with url: search_games_path, method: :get, local: true do |f| %>
+      <div class ="form-group">
+        <%= f.text_field :ps4, class: "form-control" %>
+        <%= f.submit 'PS4ゲーム名を検索', class: "form-control btn btn-success" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class='content'>
+  <div id="search-box">
+    <%= form_with url: search_games_path, method: :get, local: true do |f| %>
+      <div class ="form-group">
+        <%= f.text_field :ps5, class: "form-control" %>
+        <%= f.submit 'PS5ゲーム名を検索', class: "form-control btn btn-success" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class='content'>
+  <div id="search-box">
+    <%= form_with url: search_games_path, method: :get, local: true do |f| %>
+      <div class ="form-group">
+        <%= f.text_field :switch, class: "form-control" %>
+        <%= f.submit 'Switchゲーム名を検索', class: "form-control btn btn-success" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<% if @results.present? %>
+  <%= render 'search_games/game' %>
+<% end %>

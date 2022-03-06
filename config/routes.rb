@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root to: 'home#index'
   get 'home/show'
   resources :gamelists
+  resources :search_games, only: [:index]
 end
