@@ -13,7 +13,9 @@ require 'json'
 uri = URI.parse('https://api.steampowered.com/ISteamApps/GetAppList/v2/')
 json = Net::HTTP.get(uri)
 result = JSON.parse(json)
-puts result
-Steam.create!(
-  result
-)
+
+result.each do |apps|
+  Steam.create!(
+    { appid: apps["appid"], name: apps["name"]}
+  )
+end
