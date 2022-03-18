@@ -2,7 +2,7 @@ class GamelistsController < ApplicationController
   before_action :twitter_client, only: [:create]
 
   def index
-    @gamelists = Gamelist.all.includes(:user).order(created_at: :desc)
+    @gamelists = Gamelist.all.includes(:user).order(created_at: :desc).page(params[:page]).per(20)
   end
 
   def new
