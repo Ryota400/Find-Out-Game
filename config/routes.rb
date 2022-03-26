@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get 'home/show'
   resources :gamelists
   resources :search_games, only: [:index]
+  resources :games, only: [:index]
 end
