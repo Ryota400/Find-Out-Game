@@ -1,0 +1,22 @@
+<% content_for(:title, @gamelist.title)%>
+<div class="container pt-5">
+  <div class="row mb-3">
+    <div class="col-lg-8 offset-lg-2">
+      <h1><%= t('.title') %></h1>
+      <!-- 掲示板内容 -->
+      <article class="card">
+        <div class="card-body">
+          <div class='row'>
+            <div class='col-md-9'>
+              <h3 class="d-inline"><%= @gamelist.title %></h3>
+              <ul class="list-inline">
+                <li class="list-inline-item">by <%= @gamelist.user.username %></li>
+                <li class="list-inline-item"><%= l @gamelist.created_at, format: :long  %></li>
+              </ul>
+            </div>
+          </div>
+          <p><%= simple_format(@gamelist.body) %></p>
+        </div>
+      </article>
+    </div>
+  </div>

@@ -1,0 +1,10 @@
+ja:
+  activerecord:
+    models:
+      user: 'ユーザー'
+      gamelist: 'ゲーム共有リスト'
+    attributes:
+      gamelist:
+        title: 'タイトル'
+        body: '本文'
+        user: '作成者'
