@@ -1,10 +1,6 @@
 class GamesController < ApplicationController
   def index
-    @games = [
-      1245620,
-      1172470,
-      1446780
-    ]
+    @games =
 
     @games.each do |game|
       url = "https://store.steampowered.com/api/appdetails?appids=#{game}"

@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_17_113135) do
+ActiveRecord::Schema.define(version: 2022_04_01_072130) do
+
+  create_table "detailes", force: :cascade do |t|
+    t.string "name"
+    t.string "header"
+    t.integer "steamid"
+    t.string "release_date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "gamelists", force: :cascade do |t|
     t.string "title", null: false
