@@ -1,22 +1,19 @@
 class GamesController < ApplicationController
   def index
-    require 'net/http'
-    require 'uri'
-    require 'json'
+    @games = [
+      1245620,
+      1172470,
+      1446780
+    ]
 
-    @games = Game.pluck(:appid)
-    url = "https://store.steampowered.com/api/appdetails?appids=#{@games}"
-    uri = URI.parse(url)
-    json = Net::HTTP.get(uri)
-    result = JSON.parse(json)
-
-
-
-    @name = result[@games]["data"]["name"].to_s
-    @steam_appid = result[@games]["data"]["steam_appid"]
-    @header = result[@games]["data"]["header_image"].to_s
-
-
-
+    @games.each do |game|
+      url = "https://store.steampowered.com/api/appdetails?appids=#{game}"
+      uri = URI.parse(url)
+      json = Net::HTTP.get(uri)
+      result = JSON.parse(json)
+      @name = result["#{game.to_s}"]["data"]["name"]
+      @steam_appid = result["#{game.to_s}"]["data"]["steam_appid"]
+      puts @names
+    end
   end
 end
