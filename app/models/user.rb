@@ -9,8 +9,11 @@ class User < ApplicationRecord
       user.provider = auth["provider"]
       user.uid = auth["uid"]
       user.username = auth["info"]["nickname"]
+      user.name = auth["info"]["name"]
       user.email =  "#{auth.provider}-#{auth.uid}@example.com"
-      user.password = Devise.friendly_token[0,20] #これが必要?
+      user.password = Devise.friendly_token[0,20]
+      user.image = auth["info"]["image"]
+      uri = URI.parse(user.image)
     end
   end
 

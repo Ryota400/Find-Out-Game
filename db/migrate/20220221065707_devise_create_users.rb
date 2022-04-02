@@ -40,6 +40,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.1]
       t.string :provider
       t.string :uid
       t.string :username, default: "anonymous"
+      t.string :name
     end
 
     add_index :users, :email,                unique: true

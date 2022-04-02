@@ -310,5 +310,5 @@ Devise.setup do |config|
   # config.sign_in_after_change_password = true
   config.scoped_views = true
 
-  config.omniauth :twitter, ENV['TWITTER_API_KEY'], ENV['TWITTER_API_SECRET'], token_params: { parse: :json },  callback_url: 'http://127.0.0.1:3000/users/auth/twitter/callback'
+  config.omniauth :twitter, ENV['TWITTER_API_KEY'], ENV['TWITTER_API_SECRET'], :image_size => 'original', token_params: { parse: :json },  callback_url: 'http://127.0.0.1:3000/users/auth/twitter/callback'
 end
