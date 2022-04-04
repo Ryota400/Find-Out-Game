@@ -17,7 +17,6 @@
             <%= link_to "削除", gamelist_path(gamelist), id: "button-delete-#{gamelist.id}", method: :delete, data: { confirm: t('defaults.message.delete_confirm') }  %>
           <% end %>
         </ul>
-        <p class="card-text"><%= gamelist.body %></p>
       </div>
     </div>
   </div>

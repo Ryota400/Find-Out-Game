@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 2022_04_02_132852) do
 
   create_table "gamelists", force: :cascade do |t|
     t.string "title", null: false
-    t.text "body", null: false
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
