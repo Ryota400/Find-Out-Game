@@ -3,7 +3,7 @@
       <strong><%= link_to 'Find Out Game', root_path %></strong>
       <% if user_signed_in? %>
         <%= link_to 'ゲーム共有リスト', gamelists_path %>
-        <%= link_to current_user.username, edit_user_registration_path %>
+        <%= link_to current_user.username, users_mypage_path %>
         <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
       <% else %>
         <%= link_to 'ゲーム共有リスト', gamelists_path %>
