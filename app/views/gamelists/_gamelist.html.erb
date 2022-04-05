@@ -2,6 +2,7 @@
   <div id="gamelist-id-<%= gamelist.id %>">
     <div class="card">
       <div class="card-body">
+        <%= link_to (image_tag gamelist.user.image, size: '50x50', class: 'rounded-circle'), user_path(gamelist.user) %>
         <h4 class="card-title">
           <%= link_to gamelist.title, gamelist_path(gamelist) %>
         </h4>

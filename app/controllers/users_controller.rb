@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!
-
   def show
+    @user = User.find(params[:id])
   end
 
   def destroy
@@ -14,7 +13,11 @@ class UsersController < ApplicationController
   private
 
   def set_user
-    @user = User.find_by(:id => params[:id])
+    @user = User.find(params[:id])
+  end
+
+  def user_params
+    params.require(:user).permit(:name, :username, :image)
   end
 
 end

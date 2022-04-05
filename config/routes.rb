@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  get "users/mypage" => "users#show"
+  resource :profile, only: %i[show edit update]
   devise_for :users, controllers: { omniauth_callbacks: 'omniauth_callbacks' }
+  resources :users, only: [:show]
 
   root to: 'home#index'
   get 'home/show'
