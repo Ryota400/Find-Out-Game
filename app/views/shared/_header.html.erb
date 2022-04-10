@@ -1,13 +1,69 @@
-<header>
-  <nav>
-      <strong><%= link_to 'Find Out Game', root_path %></strong>
-      <% if user_signed_in? %>
-        <%= link_to 'ゲーム共有リスト', gamelists_path %>
-        <%= link_to 'マイページ', profile_path %>
-        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
-      <% else %>
-        <%= link_to 'ゲーム共有リスト', gamelists_path %>
-        <%= link_to "ログイン", user_twitter_omniauth_authorize_path, method: :post %>
-      <% end %>
-  </nav>
+<header class="home-page-header">
+  <div class="header-top-content">
+    <%= link_to root_path, class:"header-title text-white" do %>
+      <div>Find Out Game</div>
+    <% end %>
+
+    <div class="nav">
+      <ul class="lists-right">
+        <% if user_signed_in? %>
+          <div class="dropdown">
+            <a class="nav-link dropdown-toggle text-white " href="#" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              ゲーム検索
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><%= link_to "PSゲーム検索", search_games_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Switchゲーム検索", search_games_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Steamゲーム検索", search_games_path, class: "dropdown-item" %></li>
+            </ul>
+          </div>
+
+          <div class="dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              ゲーム共有リスト
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="gamelists">共有リスト一覧</a></li>
+              <li><a class="dropdown-item" href="gamelists/new">共有リスト作成</a></li>
+            </ul>
+          </div>
+
+          <li class="nav-item">
+            <%= link_to "マイページ", profile_path, class: "nav-link text-white" %>
+          </li>
+
+          <li class="nac-item ">
+            <%= link_to "ロウグアウト", destroy_user_session_path, method: :delete, class: "nav-link text-white" %>
+          </li>
+        <% else %>
+          <div class="dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              ゲーム検索
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="search_games">PSゲーム検索</a></li>
+              <li><a class="dropdown-item" href="search_games">Switchゲーム検索</a></li>
+              <li><a class="dropdown-item" href="search_games">Steamゲーム検索</a></li>
+            </ul>
+          </div>
+
+          <div class="dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              ゲーム共有リスト
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="gamelists">共有リスト一覧</a></li>
+            </ul>
+          </div>
+
+          <li class="nav-item">
+            <%= link_to "ログイン", user_twitter_omniauth_authorize_path, method: :post, class: "nav-link text-white" %>
+          </li>
+
+
+
+        <% end %>
+      </ul>
+    </div>
+  </div>
 </header>

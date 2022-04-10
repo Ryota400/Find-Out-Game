@@ -3,13 +3,16 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 
+
+
 .home-wrapper {
   background-image: image-url("spece.jpg");
   width: 100vw;
   height: 100vh;
   position: relative;
   background-position: center;
-
+  background-size: cover;
+  overflow: hidden;
 }
 
 .home-inner-text {
@@ -49,7 +52,7 @@
 
   p1 {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -60,7 +63,7 @@
 
   p2 {
     position: absolute;
-    top: 55%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -71,7 +74,7 @@
 
   p3 {
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -82,7 +85,7 @@
 
   p4 {
     position: absolute;
-    top: 80%;
+    top: 85%;
     left: 52%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -99,15 +102,14 @@
     }
   }
 
-  button {
+  p5 {
     position: absolute;
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 8%;
     text-align: center;
-    font-size: 1.7vw;
-    background-color: black;
+    font-size: 1.8vw;
 
     a {
       color: white;

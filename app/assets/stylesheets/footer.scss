@@ -1,0 +1,18 @@
+#footer {
+  position: absolute;
+  /* ←絶対位置 */
+  bottom: 0;
+  width: 100vw;
+
+  background: black;
+  color: #fff;
+}
+
+
+
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
