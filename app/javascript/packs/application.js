@@ -13,6 +13,8 @@ import '../stylesheets/application'
 require('./hello_vue.js')
 require('jquery')
 
+import "./search_games"
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()

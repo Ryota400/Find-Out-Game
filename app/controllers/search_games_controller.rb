@@ -4,7 +4,7 @@ class SearchGamesController < ApplicationController
       @results = RakutenWebService::Books::Game.search({
         title: params[:ps4],
         hardware: 'PS4',
-        booksGenreId: '006513'
+        booksGenreId: '006513',
       })
     end
 
