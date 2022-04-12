@@ -3,5 +3,7 @@
       <br>
       <td><p style="text-align:center"><img src="<%= item['mediumImageUrl'] %>"></p></td>
       <td><p style="text-align:center"><a class="text-white" href="<%= item['itemUrl'] %>" target="_blank"><%= item['title'] %></a></p></td>
+      <td><p id="js-copytext" style="text-align:center" class="text-white"><%= item['itemUrl'] %></p></td>
+      <td><button type="button" id="js-copybtn">Copy</button></td>
     </tr>
 <% end %>

@@ -10,6 +10,8 @@
   <button type="submit" name="commit" value="PS5ゲーム名を検索">Search</button>
 </form>
 
+<p><%= link_to "ゲーム共有作成", new_gamelist_path %></p>
+
 
 <% if @results.present? %>
   <%= render 'search_games/game' %>
