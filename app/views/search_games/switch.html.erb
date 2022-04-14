@@ -1,0 +1,12 @@
+<h1>Switch Search</h1>
+<form class="text" action="/switch" method="get">
+  <input type="text" name="switch" id="switch" placeholder="switch" required>
+  <button type="submit" name="commit" value="Switchゲーム名を検索">Enter</button>
+</form>
+
+<p><%= link_to "ゲーム共有作成", new_gamelist_path %></p>
+
+
+<% if @results.present? %>
+  <%= render 'search_games/game' %>
+<% end %>

@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   get 'home/show'
   resources :gamelists
   resources :search_games, only: [:index]
+  get 'switch', to: 'search_games#switch'
   resources :games, only: [:index]
 end

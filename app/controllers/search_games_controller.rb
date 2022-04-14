@@ -15,7 +15,9 @@ class SearchGamesController < ApplicationController
         booksGenreId: '006515'
       })
     end
+  end
 
+  def switch
     if params[:switch]
       @results = RakutenWebService::Books::Game.search({
         title: params[:switch],

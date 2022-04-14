@@ -13,7 +13,7 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               <li><%= link_to "PSゲーム検索", search_games_path, class: "dropdown-item" %></li>
-              <li><%= link_to "Switchゲーム検索", search_games_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Switchゲーム検索", switch_path, class: "dropdown-item" %></li>
               <li><%= link_to "Steamゲーム検索", search_games_path, class: "dropdown-item" %></li>
             </ul>
           </div>
@@ -23,8 +23,8 @@
               ゲーム共有リスト
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <li><a class="dropdown-item" href="gamelists">共有リスト一覧</a></li>
-              <li><a class="dropdown-item" href="gamelists/new">共有リスト作成</a></li>
+              <li><%= link_to "共有リスト作成", gamelists_path, class: "dropdown-item" %></li>
+              <li><%= link_to "共有リスト作成", new_gamelist_path, class: "dropdown-item" %></li>
             </ul>
           </div>
 
@@ -41,9 +41,9 @@
               ゲーム検索
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <li><a class="dropdown-item" href="search_games">PSゲーム検索</a></li>
-              <li><a class="dropdown-item" href="search_games">Switchゲーム検索</a></li>
-              <li><a class="dropdown-item" href="search_games">Steamゲーム検索</a></li>
+              <li><%= link_to "PSゲーム検索", search_games_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Switchゲーム検索", switch_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Steamゲーム検索", search_games_path, class: "dropdown-item" %></li>
             </ul>
           </div>
 
