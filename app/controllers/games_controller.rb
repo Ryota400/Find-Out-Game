@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
   def index
-    @games =
+    @games = Game.pluck(:appid)
 
     @games.each do |game|
       url = "https://store.steampowered.com/api/appdetails?appids=#{game}"
