@@ -261,6 +261,10 @@ GEM
     rake (13.0.6)
     rakuten_web_service (1.13.1)
       json (~> 2.3)
+    ransack (3.0.1)
+      activerecord (>= 6.0.4)
+      activesupport (>= 6.0.4)
+      i18n
     rb-fsevent (0.11.1)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -373,6 +377,7 @@ DEPENDENCIES
   rails (~> 6.1.4, >= 6.1.4.1)
   rails-i18n
   rakuten_web_service
+  ransack
   sass-rails (>= 6)
   selenium-webdriver
   spring
