@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!, except: [:index, :switch]
+  before_action :authenticate_user!, except: [:index, :switch, :show]
   add_flash_types :success, :info, :warning, :danger
 
   protected

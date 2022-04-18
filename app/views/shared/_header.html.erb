@@ -1,10 +1,10 @@
 <header class="home-page-header sticky-top">
   <div class="header-top-content">
     <%= link_to root_path, class:"header-title text-white" do %>
-      <div>Find Out Game</div>
+      <div translate="no">Find Out Game</div>
     <% end %>
 
-    <div class="nav">
+    <div class="nav" translate="no">
       <ul class="lists-right">
         <% if user_signed_in? %>
           <div class="dropdown">
@@ -43,7 +43,7 @@
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               <li><%= link_to "PSゲーム検索", search_games_path, class: "dropdown-item" %></li>
               <li><%= link_to "Switchゲーム検索", switch_path, class: "dropdown-item" %></li>
-              <li><%= link_to "Steamゲーム検索", search_games_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Steamゲーム検索", games_path, class: "dropdown-item" %></li>
             </ul>
           </div>
 

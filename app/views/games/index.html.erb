@@ -1,2 +1,10 @@
-<br>
-<td><a href="https://store.steampowered.com/app/<%= @steam_appid %>" target="_blank"><%= @name %></a></td>
+<form class="text" action="/games" method="get">
+  <input type="text" name="q[name_cont]" id="q_name_cont" placeholder="Steam" required>
+  <button type="submit" name="commit" value="検索" data-disable-with="検索">Enter</button>
+</form>
+
+<% @games.each do |game| %>
+  <p><a href="https://store.steampowered.com/app/<%= game.appid %>" target="_blank"><%= game.name %></a></p>
+<% end %>
+
+<%= paginate @games %>
