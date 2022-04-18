@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   resources :gamelists
   resources :search_games, only: [:index]
   get 'switch', to: 'search_games#switch'
-  resources :games
+  resources :pcgames, only: [:index, :show]
 end

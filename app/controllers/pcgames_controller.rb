@@ -1,8 +1,7 @@
-class GamesController < ApplicationController
+class PcgamesController < ApplicationController
   def index
     @q = Game.ransack(params[:q])
     @games = @q.result(distinct: true).all.page(params[:page]).per(30)
-
   end
 
 
