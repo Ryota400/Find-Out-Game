@@ -1,7 +1,13 @@
 class PcgamesController < ApplicationController
+
   def index
     @q = Game.ransack(params[:q])
-    @games = @q.result(distinct: true).all.page(params[:page]).per(30)
+    @games = @q.result(distinct: true)
+  end
+
+  def search
+    @q = Game.ransack(params[:q])
+    @games = @q.result(distinct: true)
   end
 
 
@@ -17,6 +23,12 @@ class PcgamesController < ApplicationController
       @detail = result[params[:id]]["data"]["short_description"]
     end
 
+  end
+
+  private
+
+  def set_q
+    @q = Game.ransack(params[:q])
   end
 
 end

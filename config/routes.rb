@@ -8,5 +8,9 @@ Rails.application.routes.draw do
   resources :gamelists
   resources :search_games, only: [:index]
   get 'switch', to: 'search_games#switch'
-  resources :pcgames, only: [:index, :show]
+  resources :pcgames do
+    collection do
+      get 'search'
+    end
+  end
 end
