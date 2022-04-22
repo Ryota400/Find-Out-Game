@@ -1,5 +1,9 @@
-<%= search_form_for @q, url: search_pcgames_path do |f| %>
-  <%= f.label :name, "ゲーム名" %>
-  <%= f.search_field :name_cont %>
-  <%= f.submit "検索", class:  "btn btn-success" %>
-<% end %>
+<h1>Steam Search</h1>
+
+
+<form class="text" action="/pcgames/search" method="get">
+  <input type="text" name="q[name_cont]" id="q_name_cont" placeholder="Steam" required>
+  <button type="submit" name="commit" value="検索" data-disable-with="検索">Enter</button>
+</form>
+
+<p><%= link_to "ゲーム共有作成", new_gamelist_path, class: 'btn btn-primary'%></p>
