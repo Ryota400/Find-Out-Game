@@ -52,16 +52,13 @@
               ゲーム共有リスト
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <li><a class="dropdown-item" href="gamelists">共有リスト一覧</a></li>
+              <li><%= link_to "共有リスト一覧", gamelists_path, class: "dropdown-item" %></li>
             </ul>
           </div>
 
           <li class="nav-item">
             <%= link_to "ログイン", user_twitter_omniauth_authorize_path, method: :post, class: "nav-link text-white" %>
           </li>
-
-
-
         <% end %>
       </ul>
     </div>
