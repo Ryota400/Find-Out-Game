@@ -8,7 +8,7 @@
         <div class="card-body">
           <div class='row'>
             <div class='col-md-9'>
-              <p class="d-inline"><%= @gamelist.title %></p>
+              <p class="d-inline"><%= auto_link(simple_format(@gamelist.title), html: {target: '_blank'}) %></p>
               <ul class="list-inline">
                 <li class="list-inline-item">by <%= @gamelist.user.username %></li>
                 <li class="list-inline-item"><%= l @gamelist.created_at, format: :long  %></li>

@@ -4,7 +4,7 @@
       <div class="card-body">
         <%= link_to (image_tag gamelist.user.image, size: '50x50', class: 'rounded-circle'), user_path(gamelist) %>
         <h4 class="card-title">
-          <%= gamelist.title %>
+          <%= auto_link(simple_format(gamelist.title), html: {target: '_blank'}) %>
         </h4>
         <ul class="list-inline">
           <li class="list-inline-item">
@@ -14,7 +14,6 @@
             <%= l gamelist.created_at, format: :long %>
           </li>
           <% if gamelist.user == current_user %>
-            <%= link_to "詳細", gamelist_path(gamelist) %>
             <%= link_to "編集", edit_gamelist_path(gamelist), id: "gamelist-edit-#{gamelist.id}"  %>
             <%= link_to "削除", gamelist_path(gamelist), id: "button-delete-#{gamelist.id}", method: :delete, data: { confirm: t('defaults.message.delete_confirm') }  %>
           <% end %>
