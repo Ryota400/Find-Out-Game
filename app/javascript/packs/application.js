@@ -18,3 +18,6 @@ import "./search_games"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+require("trix")
+require("@rails/actiontext")
