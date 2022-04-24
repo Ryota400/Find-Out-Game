@@ -1,9 +1,10 @@
 <%= form_with model: gamelist, local: true do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="form-group">
-    <%= f.label :title %>
-    <%= f.text_area :title, class: 'form-control' %>
+    <%= f.label :title, "投稿内容" %>
+    <%= f.text_area :title, class: 'form-control js-text', rows: 6, placeholder: '改行は反映されません'	%>
+    <p class="js-text-count pull-right"></p>
   </div>
 
-  <%= f.submit class: 'btn btn-primary' %>
+  <%= f.submit 'ツイート', class: 'btn btn-primary' %>
 <% end %>

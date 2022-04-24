@@ -2,7 +2,7 @@
   <div id="gamelist-id-<%= gamelist.id %>">
     <div class="card">
       <div class="card-body">
-        <%= link_to (image_tag gamelist.user.image, size: '50x50', class: 'rounded-circle'), user_path(gamelist) %>
+        <%= link_to (image_tag gamelist.user.image, size: '50x50', class: 'rounded-circle'), "https://twitter.com/#{gamelist.user.username}",{target: '_blank'} %>
         <h4 class="card-title">
           <%= auto_link(simple_format(gamelist.title), html: {target: '_blank'}) %>
         </h4>

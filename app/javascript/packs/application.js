@@ -14,6 +14,7 @@ require('./hello_vue.js')
 require('jquery')
 
 import "./search_games"
+import "./count"
 
 Rails.start()
 Turbolinks.start()
