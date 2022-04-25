@@ -6,8 +6,9 @@ Rails.application.routes.draw do
   root to: 'home#index'
   get 'home/show'
   resources :gamelists
-  resources :search_games, only: [:index]
+  resources :search_games
   get 'switch', to: 'search_games#switch'
+  get 'ps', to: "search_games#ps"
   resources :pcgames do
     collection do
       get 'search'

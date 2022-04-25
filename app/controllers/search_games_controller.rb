@@ -1,5 +1,5 @@
 class SearchGamesController < ApplicationController
-  def index
+  def ps
     if params[:ps4]
       @results = RakutenWebService::Books::Game.search({
         title: params[:ps4],
