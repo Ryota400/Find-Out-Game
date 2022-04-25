@@ -3,9 +3,10 @@
     <div class="card">
       <div class="card-body">
         <%= link_to (image_tag gamelist.user.image, size: '50x50', class: 'rounded-circle'), "https://twitter.com/#{gamelist.user.username}",{target: '_blank'} %>
-        <h4 class="card-title">
+        <p class="card-title">
           <%= auto_link(simple_format(gamelist.title), html: {target: '_blank'}) %>
-        </h4>
+        </p>
+        <p><iframe src="https://hatenablog-parts.com/embed?url=<%= gamelist.body %>" class="embed-card embed-webcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 155px; max-width: 500px; margin: 10px 0px;"></iframe></p>
         <ul class="list-inline">
           <li class="list-inline-item">
             <%= gamelist.user.username %>
