@@ -15,8 +15,8 @@
             <%= l gamelist.created_at, format: :long %>
           </li>
           <% if gamelist.user == current_user %>
-            <%= link_to "編集", edit_gamelist_path(gamelist), id: "gamelist-edit-#{gamelist.id}", data: {"turbolinks" => false} %>
-            <%= link_to "削除", gamelist_path(gamelist), id: "button-delete-#{gamelist.id}", method: :delete, data: { confirm: t('defaults.message.delete_confirm') }  %>
+            <%= link_to "編集", edit_gamelist_path(gamelist), id: "gamelist-edit-#{gamelist.id}", data: {"turbolinks" => false}, class: 'text-white' %>
+            <%= link_to "削除", gamelist_path(gamelist), id: "button-delete-#{gamelist.id}", method: :delete, data: { confirm: t('defaults.message.delete_confirm') }, class: 'text-white'  %>
           <% end %>
         </ul>
       </div>
