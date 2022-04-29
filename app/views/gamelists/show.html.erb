@@ -7,8 +7,9 @@
       <article class="card">
         <div class="card-body">
           <div class='row'>
-            <div class='col-md-9'>
+            <div class='col-md-9, text-center'>
               <p class="d-inline"><%= auto_link(simple_format(@gamelist.title), html: {target: '_blank'}) %></p>
+              <p><iframe src="https://hatenablog-parts.com/embed?url=<%= @gamelist.body %>" class="embed-card embed-webcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 155px; max-width: 500px; margin: 0px 160px; "></iframe></p>
               <ul class="list-inline">
                 <li class="list-inline-item">by <%= @gamelist.user.username %></li>
                 <li class="list-inline-item"><%= l @gamelist.created_at, format: :long  %></li>
