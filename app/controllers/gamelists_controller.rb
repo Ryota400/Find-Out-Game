@@ -47,7 +47,7 @@ class GamelistsController < ApplicationController
   private
 
   def gamelist_params
-    params.require(:gamelist).permit(:title, :body)
+    params.require(:gamelist).permit(:title, :body, :star)
   end
 
   def ensure_user

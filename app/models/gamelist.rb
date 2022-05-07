@@ -3,4 +3,5 @@ class Gamelist < ApplicationRecord
 
   validates :title, presence: true, length: { maximum: 140  }
   validates :body, presence: true
+  validates :star, presence: true
 end

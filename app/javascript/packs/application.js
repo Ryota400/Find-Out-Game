@@ -11,10 +11,12 @@ import 'bootstrap'
 import '../stylesheets/application'
 
 require('./hello_vue.js')
-require('jquery')
+window.$ = window.jQuery = require('jquery')
+require('packs/raty')
 
 import "./search_games"
 import "./count"
+import "./gamelist"
 
 Rails.start()
 Turbolinks.start()

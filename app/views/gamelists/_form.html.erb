@@ -4,7 +4,26 @@
     <%= f.label :body, "ゲームサイトURL", class: 'text-white' %>
     <%= f.url_field  :body, class: 'form-control js-text', placeholder: 'https://....' %>
   </div>
+
   <br>
+
+  <div class="form-group" id="star">
+    <%= f.label :star, '評価 ', class:'col-md-3 col-form-label text-white' %>
+    <%= f.hidden_field :star, id: :review_star %>
+  </div>
+
+  <script>
+    $('#star').raty({
+      size     :36,
+      starOff:  '<%= asset_path('star-off.png') %>',
+      starOn : '<%= asset_path('star-on.png') %>',
+
+      scoreName: 'gamelist[star]',
+      half: false,
+    });
+  </script>
+  <br>
+
   <div class="form-group">
     <%= f.label :title, "ツイート内容", class: 'text-white' %>
     <%= f.text_area :title, class: 'form-control js-text', rows: 6, placeholder: 'ゲーム名・おすすめの理由・遊びたい理由など'	%>
