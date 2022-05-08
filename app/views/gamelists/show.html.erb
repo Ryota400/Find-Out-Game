@@ -8,7 +8,7 @@
         <div class="card-body">
           <div class='row'>
             <div class='col-md-8, text-center'>
-              <p><%= @gamelist.gametitle %>
+              <p><%= @gamelist.gametitle %></p>
               <p class="d-inline"><%= auto_link(simple_format(@gamelist.title), html: {target: '_blank'}) %></p>
               <p1 class="text-left text-white">評価 :<%= @gamelist.star %>点</p1>
               <p2 id="star-rate<%= @gamelist.id%>"></p2>
