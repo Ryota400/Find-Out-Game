@@ -12,7 +12,7 @@ class GamelistsController < ApplicationController
   def create
     @gamelist = current_user.gamelists.build(gamelist_params)
     if @gamelist.save
-      @client.update("#{@gamelist.title} #{@gamelist.body} #{gamelists_url(@gamelist.id)}\r")
+      @client.update("#{@gamelist.gametitle} #{@gamelist.body} #{gamelists_url(@gamelist.id)}\r")
       redirect_to gamelists_path, success: t('defaults.message.created', item: Gamelist.model_name.human)
     else
       flash.now['danger'] = t('defaults.message.not_created', item: Gamelist.model_name.human)
@@ -47,7 +47,7 @@ class GamelistsController < ApplicationController
   private
 
   def gamelist_params
-    params.require(:gamelist).permit(:title, :body, :star)
+    params.require(:gamelist).permit(:title, :body, :star, :gametitle)
   end
 
   def ensure_user

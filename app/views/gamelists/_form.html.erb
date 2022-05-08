@@ -1,5 +1,13 @@
 <%= form_with model: gamelist, local: true do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
+
+  <div class="form-group">
+    <%= f.label :gametitle, "ゲーム名", class: 'text-white' %>
+    <%= f.text_field :gametitle, class: 'form-control js-text' %>
+  </div>
+
+  <br>
+
   <div class="form-group">
     <%= f.label :body, "ゲームサイトURL", class: 'text-white' %>
     <%= f.url_field  :body, class: 'form-control js-text', placeholder: 'https://....' %>
@@ -11,7 +19,6 @@
     <%= f.label :star, '評価 ', class:'col-md-3 col-form-label text-white' %>
     <%= f.hidden_field :star, id: :review_star %>
   </div>
-
   <script>
     $('#star').raty({
       size     :36,
@@ -22,13 +29,15 @@
       half: false,
     });
   </script>
+
   <br>
 
   <div class="form-group">
     <%= f.label :title, "ツイート内容", class: 'text-white' %>
-    <%= f.text_area :title, class: 'form-control js-text', rows: 6, placeholder: 'ゲーム名・おすすめの理由・遊びたい理由など'	%>
+    <%= f.text_area :title, class: 'form-control js-text', rows: 6, placeholder: 'おすすめの理由・遊びたい理由・評価の理由など'	%>
   </div>
 
   <p class="js-text-count pull-right text-white"></p>
   <%= f.submit 'ツイート', class: 'btn btn-primary' %>
+
 <% end %>
